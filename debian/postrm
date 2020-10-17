@@ -1,0 +1,11 @@
+#!/bin/sh
+# postrm script for flexibee-tools
+
+set -e
+
+rm -fr /var/lib/flexibee-tools 
+rm -f /usr/share/flexibee-tools/composer.lock
+
+#DEBHELPER#
+
+exit 0

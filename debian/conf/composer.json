@@ -1,0 +1,47 @@
+{
+  "name": "deb/flexibee-report-tools",
+  "description": "Custom FlexiBee Report Tools.",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vitex",
+      "email": "info@vitexsoftware.cz"
+    }
+  ],
+  "bin": [
+    "bin/upreport",
+    "bin/repxmlunpacker"
+  ],
+  "config": {
+    "vendor-dir": "/var/lib/flexibee-report-tools"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "/usr/share/php/FlexiPeeHP",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "require": {
+    "deb/ease-core": "*",
+    "deb/flexibee": "*"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
+      "Test\\FlexiPeeHP\\": "vendor/spoje.net/flexibee/tests/src/FlexiPeeHP",
+      "Test\\": "testing/"
+    }
+  },
+  "version": "0.10.4"
+}

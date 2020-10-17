@@ -1,0 +1,34 @@
+{
+    "name": "vitexsoftware/flexibee-report-tools",
+    "description": "Several FlexiBee Report Tools.",
+    "type": "project",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vitex",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "bin": ["bin/fbget", "bin/fbput", "bin/fbcp","bin/upreport"],
+    "require": {
+        "spoje.net/flexibee": "dev-master",
+        "lightools/xml": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "FlexiPeeHP\\Bricks\\": "FlexiPeeHP/Bricks",
+            "FlexiPeeHP\\ui\\": "FlexiPeeHP/ui"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/EaseCore",
+            "Test\\FlexiPeeHP\\": "vendor/spoje.net/flexipeehp/tests/src/FlexiPeeHP",
+            "Test\\": "testing/"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.3"
+    }
+}

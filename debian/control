@@ -1,0 +1,18 @@
+Source: flexibee-report-tools
+Build-Depends: debhelper (>= 7.0.50~),po-debconf
+Standards-Version: 3.9.8
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Priority: optional
+Homepage: https://github.com/VitexSoftware/FlexiBee-Report-Tools
+Section: development
+
+Package: flexibee-report-tools
+Depends: ${misc:Depends},composer, php-cli, php-spojenet-flexibee, jaspercompiler
+Suggests: flexibee-server, jasperstudio, flexibee-client, dark-flexibee-client
+Architecture: all
+Section: devel
+Priority: optional
+Description: commandline FlexiBee Report tools
+ Set of tools related to Abra FlexBee custom Reports
+ 
