@@ -47,8 +47,6 @@ sudo apt install flexibee-report-tools
 
 ![Debian Installation](debian-screenshot.png?raw=true "Debian example")
 
-Note: Debian package depends on [php-flexibee-config](https://github.com/VitexSoftware/php-flexibee-config) package
-
 We use:
 
   * [PHP Language](https://secure.php.net/)
