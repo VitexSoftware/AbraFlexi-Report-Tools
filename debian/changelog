@@ -1,8 +1,8 @@
-flexibee-report-tools (0.1) UNRELEASED; urgency=medium
+flexibee-report-tools (0.10.4) UNRELEASED; urgency=medium
 
   * initial-commit
   * 
   * getting Evidence structure data update
+  * Initial commit
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Sat, 18 Jul 2020 22:38:41 +0200
-
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Sun, 18 Oct 2020 01:32:56 +0200
