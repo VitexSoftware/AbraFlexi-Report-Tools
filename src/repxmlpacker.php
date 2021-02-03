@@ -1,7 +1,7 @@
 <?php
 
 /**
- * FlexiBee Tools  - Jasper Project to Report XML packer
+ * AbraFlexi Tools  - Jasper Project to Report XML packer
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2020 Vitex Software
@@ -16,7 +16,7 @@ if (file_exists($loaderPath)) {
     require __DIR__ . '/../vendor/autoload.php';
 }
 
-define('EASE_APPNAME', 'JasperProjectToFlexiBeeXML');
+define('EASE_APPNAME', 'JasperProjectToAbraFlexiXML');
 define('EASE_LOGGER', 'syslog|console');
 
 

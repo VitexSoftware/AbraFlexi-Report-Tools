@@ -1,6 +1,6 @@
 {
-  "name": "deb/flexibee-report-tools",
-  "description": "Custom FlexiBee Report Tools.",
+  "name": "deb/abraflexi-report-tools",
+  "description": "Custom AbraFlexi Report Tools.",
   "minimum-stability": "dev",
   "license": "MIT",
   "authors": [
@@ -14,7 +14,7 @@
     "bin/repxmlunpacker"
   ],
   "config": {
-    "vendor-dir": "/var/lib/flexibee-report-tools"
+    "vendor-dir": "/var/lib/abraflexi-report-tools"
   },
   "repositories": [
     {
@@ -34,12 +34,12 @@
   ],
   "require": {
     "deb/ease-core": "*",
-    "deb/flexibee": "*"
+    "deb/abraflexi": "*"
   },
   "autoload-dev": {
     "psr-4": {
       "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
-      "Test\\FlexiPeeHP\\": "vendor/spoje.net/flexibee/tests/src/FlexiPeeHP",
+      "Test\\FlexiPeeHP\\": "vendor/spoje.net/abraflexi/tests/src/FlexiPeeHP",
       "Test\\": "testing/"
     }
   },

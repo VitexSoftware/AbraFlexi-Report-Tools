@@ -1,7 +1,7 @@
 <?php
 
 /**
- * FlexiBee Tools  - Report XML unpacker
+ * AbraFlexi Tools  - Report XML unpacker
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2020 Vitex Software
@@ -18,8 +18,8 @@ define('EASE_LOGGER', 'syslog|console');
 
 
 if ($argc != 3) {
-    echo "Create JasperStudio project from FlexiBee report installation file\n\nUsage:\n";
-    echo pathinfo(basename(__FILE__), PATHINFO_FILENAME) . "  flexibee-reports-import.xml /saveto/jasper/project/destorworkspace \n";
+    echo "Create JasperStudio project from AbraFlexi report installation file\n\nUsage:\n";
+    echo pathinfo(basename(__FILE__), PATHINFO_FILENAME) . "  abraflexi-reports-import.xml /saveto/jasper/project/destorworkspace \n";
     exit(1);
 }
 
@@ -31,7 +31,7 @@ if (!file_exists($projectPath)) {
     mkdir($projectPath);
     mkdir($projectPath . '/bin');
 
-    $fblib = '/usr/share/flexibee/lib/';
+    $fblib = '/usr/share/abraflexi/lib/';
     $fbver = file_exists($fblib . 'VERSION.txt') ? trim(file_get_contents($fblib . 'VERSION.txt')) : '2020.2.2';
     $classpath = '<?xml version="1.0" encoding="UTF-8"?>
 <classpath>
@@ -84,7 +84,7 @@ if (!file_exists($projectPath)) {
     file_put_contents($projectPath . '/.project', $project);
 }
 
-$reportsXML = \FlexiPeeHP\FlexiBeeRO::xml2array(file_get_contents($sourceFile));
+$reportsXML = \FlexiPeeHP\AbraFlexiRO::xml2array(file_get_contents($sourceFile));
 if (array_key_exists('report', $reportsXML) && count($reportsXML['report'])) {
     foreach ($reportsXML['report'] as $report) {
         if (array_key_exists('kod', $report)) {

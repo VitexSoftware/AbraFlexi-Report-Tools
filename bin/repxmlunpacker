@@ -1,6 +1,6 @@
 #!/usr/bin/env php
 <?php
-/* FlexiBee Report XML Unpacker
+/* AbraFlexi Report XML Unpacker
  *
  * (The MIT license)
  * Copyright (c) 2020 Vítězslav Dvořák

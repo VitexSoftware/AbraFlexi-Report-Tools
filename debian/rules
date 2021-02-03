@@ -5,9 +5,9 @@
 
 override_dh_install:
 	dh_install
-	sed -i '/require/c\require  "/usr/share/flexibee-report-tools/upreport.php";' debian/flexibee-report-tools/usr/bin/upreport
-	sed -i '/dirname(__DIR__)/c require_once "\/var\/lib\/flexibee-report-tools\/autoload.php";' debian/flexibee-report-tools/usr/share/flexibee-report-tools/*
-	sed -i "/realpath/c\$$loaderPath = \"/var/lib/flexibee-report-tools/autoload.php\";" debian/flexibee-report-tools/usr/share/flexibee-report-tools/*
+	sed -i '/require/c\require  "/usr/share/abraflexi-report-tools/upreport.php";' debian/abraflexi-report-tools/usr/bin/upreport
+	sed -i '/dirname(__DIR__)/c require_once "\/var\/lib\/abraflexi-report-tools\/autoload.php";' debian/abraflexi-report-tools/usr/share/abraflexi-report-tools/*
+	sed -i "/realpath/c\$$loaderPath = \"/var/lib/abraflexi-report-tools/autoload.php\";" debian/abraflexi-report-tools/usr/share/abraflexi-report-tools/*
 
 override_dh_clean:
 	dh_clean

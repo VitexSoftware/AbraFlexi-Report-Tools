@@ -1,6 +1,6 @@
 {
-    "name": "vitexsoftware/flexibee-report-tools",
-    "description": "Several FlexiBee Report Tools.",
+    "name": "vitexsoftware/abraflexi-report-tools",
+    "description": "Several AbraFlexi Report Tools.",
     "type": "project",
     "minimum-stability": "stable",
     "license": "MIT",
@@ -12,13 +12,12 @@
     ],
     "bin": ["bin/fbget", "bin/fbput", "bin/fbcp","bin/upreport"],
     "require": {
-        "spoje.net/flexibee": "dev-master",
+        "spoje.net/abraflexi": "dev-master",
         "lightools/xml": "*"
     },
     "autoload": {
         "psr-4": {
-            "FlexiPeeHP\\Bricks\\": "FlexiPeeHP/Bricks",
-            "FlexiPeeHP\\ui\\": "FlexiPeeHP/ui"
+            "AbraFlexi\\Report\\": "src/Report"
         }
     },
     "autoload-dev": {
@@ -29,6 +28,5 @@
         }
     },
     "require-dev": {
-        "codeception/codeception": "^2.3"
     }
 }
