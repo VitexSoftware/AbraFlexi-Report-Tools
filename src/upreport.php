@@ -49,9 +49,9 @@ if ($argc < 3) {
 
     if (file_exists($reportFile)) {
 
-        $reporter = new FlexiPeeHP\Report($reportID);
+        $reporter = new AbraFlexi\Report($reportID);
         $oldReportId = intval($reporter->getDataValue('hlavniReport'));
-        $attachment = \FlexiPeeHP\Priloha::addAttachmentFromFile($reporter, $reportFile);
+        $attachment = \AbraFlexi\Priloha::addAttachmentFromFile($reporter, $reportFile);
         if ($reporter->sync(['hlavniReport' => $attachment->getRecordID(), 'id' => $reporter->getRecordID()])) {
             if ($oldReportId) {
                 $attachment->deleteFromAbraFlexi($oldReportId);

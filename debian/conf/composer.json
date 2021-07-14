@@ -26,7 +26,7 @@
     },
     {
       "type": "path",
-      "url": "/usr/share/php/FlexiPeeHP",
+      "url": "/usr/share/php/AbraFlexi",
       "options": {
         "symlink": true
       }
@@ -39,7 +39,7 @@
   "autoload-dev": {
     "psr-4": {
       "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
-      "Test\\FlexiPeeHP\\": "vendor/spoje.net/abraflexi/tests/src/FlexiPeeHP",
+      "Test\\AbraFlexi\\": "vendor/spoje.net/abraflexi/tests/src/AbraFlexi",
       "Test\\": "testing/"
     }
   },

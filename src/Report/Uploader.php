@@ -12,7 +12,7 @@ namespace \AbraFlexi\Report;
  *
  * @author Vítězaslav Dvořák <info@vitexsoftware.cz>
  */
-class Uploader extends \FlexiPeeHP\Report {
+class Uploader extends \AbraFlexi\Report {
 
     public function __construct($init = null, $options = array()) {
         parent::__construct($init, $options);
@@ -35,10 +35,10 @@ class Uploader extends \FlexiPeeHP\Report {
      * 
      * @param string $filename
      * 
-     * @return \FlexiPeeHP\Priloha
+     * @return \AbraFlexi\Priloha
      */
     public function attachFile($filename) {
-        return \FlexiPeeHP\Priloha::addAttachmentFromFile($this, pathinfo($filename, PATHINFO_EXTENSION) == 'jrxml' ? self::compileJasper($filename) : $filename);
+        return \AbraFlexi\Priloha::addAttachmentFromFile($this, pathinfo($filename, PATHINFO_EXTENSION) == 'jrxml' ? self::compileJasper($filename) : $filename);
     }
 
 }

@@ -84,7 +84,7 @@ if (!file_exists($projectPath)) {
     file_put_contents($projectPath . '/.project', $project);
 }
 
-$reportsXML = \FlexiPeeHP\AbraFlexiRO::xml2array(file_get_contents($sourceFile));
+$reportsXML = \AbraFlexi\AbraFlexiRO::xml2array(file_get_contents($sourceFile));
 if (array_key_exists('report', $reportsXML) && count($reportsXML['report'])) {
     foreach ($reportsXML['report'] as $report) {
         if (array_key_exists('kod', $report)) {
