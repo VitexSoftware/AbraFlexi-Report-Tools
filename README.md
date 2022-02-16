@@ -52,7 +52,7 @@ We use:
   * [PHP Language](https://secure.php.net/)
   * [PHP AbraFlexi](https://github.com/Spoje-NET/php-abraflexi) - Library for Interaction with [AbraFlexi](https://abraflexi.eu/)
   * [Ease Core](https://github.com/VitexSoftware/php-ease-core) - Glue & Tool Set 
-  * [Jasper Compiler](http s://github.com/VitexSoftware/jaspercompiler) - commandline jrxml compiler with AbraFlexi support
+  * [Jasper Compiler](https://github.com/VitexSoftware/jaspercompiler) - commandline jrxml compiler with AbraFlexi support
 
 Thanks to:
 ----------
