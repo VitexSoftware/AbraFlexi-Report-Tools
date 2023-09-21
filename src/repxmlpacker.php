@@ -4,7 +4,7 @@
  * AbraFlexi Tools  - Jasper Project to Report XML packer
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2020 Vitex Software
+ * @copyright  2020,2023 Vitex Software
  */
 $destFile = "/home/vitex/Projects/Dativery/VinozArchivu/faktura-blue.xml";
 $loadFrom = '/tmp/';

@@ -16,7 +16,7 @@ if (file_exists($loaderPath)) {
 define('EASE_APPNAME', 'ReportUploader');
 define('EASE_LOGGER', 'syslog|console');
 
-if (empty(\Ease\Functions::cfg('ABRAFLEXI_URL'))) {
+if (empty(\Ease\Shared::cfg('ABRAFLEXI_URL'))) {
     echo "Please set up AbraFlexi client configuration environment: \n\n";
     echo "ABRAFLEXI_URL=https://demo.abraflexi.eu:5434\n";
     echo "ABRAFLEXI_PASSWORD=winstrom\n";
@@ -49,7 +49,7 @@ if ($argc < 3) {
 
     if (file_exists($reportFile)) {
 
-        $reporter = new AbraFlexi\Report($reportID);
+        $reporter = new \AbraFlexi\Report($reportID);
         $oldReportId = intval($reporter->getDataValue('hlavniReport'));
         $attachment = \AbraFlexi\Priloha::addAttachmentFromFile($reporter, $reportFile);
         if ($reporter->sync(['hlavniReport' => $attachment->getRecordID(), 'id' => $reporter->getRecordID()])) {

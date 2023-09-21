@@ -4,7 +4,7 @@
  * AbraFlexi Tools  - Report XML unpacker
  *
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
- * @copyright  2020 Vitex Software
+ * @copyright  2020,2023 Vitex Software
  */
 $loaderPath = realpath(__DIR__ . "/../../../autoload.php");
 if (file_exists($loaderPath)) {
@@ -84,7 +84,7 @@ if (!file_exists($projectPath)) {
     file_put_contents($projectPath . '/.project', $project);
 }
 
-$reportsXML = \AbraFlexi\AbraFlexiRO::xml2array(file_get_contents($sourceFile));
+$reportsXML = \AbraFlexi\AbraFlexi\RO::xml2array(file_get_contents($sourceFile));
 if (array_key_exists('report', $reportsXML) && count($reportsXML['report'])) {
     foreach ($reportsXML['report'] as $report) {
         if (array_key_exists('kod', $report)) {
