@@ -12,8 +12,8 @@
     ],
     "bin": ["bin/fbget", "bin/fbput", "bin/fbcp","bin/upreport"],
     "require": {
-        "spoje.net/abraflexi": "dev-master",
-        "lightools/xml": "*"
+        "spojenet/flexibee": "^2.24",
+        "lightools/xml": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -23,8 +23,7 @@
     "autoload-dev": {
         "psr-4": {
             "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/EaseCore",
-            "Test\\FlexiPeeHP\\": "vendor/spoje.net/flexipeehp/tests/src/FlexiPeeHP",
-            "Test\\": "testing/"
+            "Test\\": "tests/"
         }
     },
     "require-dev": {
