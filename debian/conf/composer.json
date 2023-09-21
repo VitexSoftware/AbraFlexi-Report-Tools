@@ -39,7 +39,7 @@
   "autoload-dev": {
     "psr-4": {
       "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
-      "Test\\AbraFlexi\\": "vendor/spoje.net/abraflexi/tests/src/AbraFlexi",
+      "Test\\AbraFlexi\\": "vendor/spojenet/abraflexi/tests/src/AbraFlexi",
       "Test\\": "testing/"
     }
   },
