@@ -8,7 +8,7 @@ Homepage: https://github.com/VitexSoftware/AbraFlexi-Report-Tools
 Section: development
 
 Package: abraflexi-report-tools
-Depends: ${misc:Depends},composer, php-cli, php-spojenet-abraflexi, jaspercompiler
+Depends: ${misc:Depends},composer, php-cli, php-spojenet-abraflexi, jaspercompiler, composer-debian
 Suggests: abraflexi-server, jasperstudio, abraflexi-client, dark-abraflexi-client
 Architecture: all
 Section: devel

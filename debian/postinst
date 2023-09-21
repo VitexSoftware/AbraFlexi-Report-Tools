@@ -5,16 +5,7 @@
 set -e
 . /usr/share/debconf/confmodule
 
-db_get composer/WEB_USER
-WEBUSER=$RET
-mkdir -p /var/lib/abraflexi-report-tools /var/lib/composer /usr/lib/abraflexi-report-tools/
-echo '{}' > /usr/share/abraflexi-report-tools/composer.lock
-chown $WEBUSER /var/lib/abraflexi-report-tools /usr/share/abraflexi-report-tools/composer.lock /var/lib/composer -R
-
-cd /var/lib/abraflexi-report-tools
-
-su - $WEBUSER -s /bin/bash -c 'COMPOSER_HOME="/var/lib/composer" composer -o install -d /usr/share/abraflexi-report-tools/'
-
+composer-debian abraflexi-report-tools
 
 #DEBHELPER#
 
