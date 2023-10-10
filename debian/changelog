@@ -1,6 +1,10 @@
-abraflexi-report-tools (0.2) UNRELEASED; urgency=medium
+abraflexi-report-tools (0.3) UNRELEASED; urgency=medium
 
+  [ CyberVitexus ]
   * initial-commit
   * Release v0.10.4
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Sun, 18 Oct 2020 01:35:12 +0200
+  [ vitex ]
+  * Update
+
+ -- vitex <info@vitexsoftware.cz>  Tue, 10 Oct 2023 23:32:37 +0200

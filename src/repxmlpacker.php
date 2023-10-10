@@ -6,6 +6,7 @@
  * @author     Vítězslav Dvořák <vitex@arachne.cz>
  * @copyright  2020,2023 Vitex Software
  */
+
 $destFile = "/home/vitex/Projects/Dativery/VinozArchivu/faktura-blue.xml";
 $loadFrom = '/tmp/';
 
@@ -18,5 +19,3 @@ if (file_exists($loaderPath)) {
 
 define('EASE_APPNAME', 'JasperProjectToAbraFlexiXML');
 define('EASE_LOGGER', 'syslog|console');
-
-
