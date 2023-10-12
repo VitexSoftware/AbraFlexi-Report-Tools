@@ -36,11 +36,9 @@
     "deb/ease-core": "*",
     "deb/abraflexi": "*"
   },
-  "autoload-dev": {
+  "autoload": {
     "psr-4": {
-      "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
-      "Test\\AbraFlexi\\": "vendor/spojenet/abraflexi/tests/src/AbraFlexi",
-      "Test\\": "testing/"
+      "AbraFlexi\\Report\\": "./Report"
     }
   },
   "version": "0.10.4"
