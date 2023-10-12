@@ -9,7 +9,7 @@ Section: development
 
 Package: abraflexi-report-tools
 Depends: ${misc:Depends},composer, php-cli, php-spojenet-abraflexi,  composer-debian
-Recommends: abraflexi-server, jasperstudio, abraflexi-client, dark-abraflexi-client, jaspercompiler
+Recommends: abraflexi-server, jasperstudio, abraflexi-client, dark-abraflexi-client, jaspercompiler, abraflexi-client-config
 Architecture: any
 Section: devel
 Priority: optional

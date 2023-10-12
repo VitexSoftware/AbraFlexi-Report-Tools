@@ -21,7 +21,11 @@ if ($argc < 3) {
     $attachments = array_slice($argv, 4);
     $uploader = new \AbraFlexi\Report\Uploader($reportID);
     foreach ($attachments as $attachment) {
-        $uploader->attachFile($attachment);
+        if (file_exists($attachment)) {
+            $uploader->attachFile($attachment);
+        } else {
+            $uploader->addStatusMessage($attachment . ' not found', 'errorr');
+        }
     }
 
     if (strstr($reportFile, '.jrxml')) {
