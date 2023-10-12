@@ -38,8 +38,8 @@ For Debian or Ubuntu please use [repo](http://vitexsoftware.cz/repos.php):
 
 ```sheel
 sudo apt install lsb-release wget
-echo "deb http://repo.vitexsoftware.cz $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
-sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.cz/keyring.gpg
+echo "deb http://repo.vitexsoftware.com $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
+sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.com/keyring.gpg
 sudo apt update
 sudo apt install abraflexi-report-tools
 ```
@@ -49,13 +49,13 @@ sudo apt install abraflexi-report-tools
 
 We use:
 
-  * [PHP Language](https://secure.php.net/)
-  * [PHP AbraFlexi](https://github.com/Spoje-NET/php-abraflexi) - Library for Interaction with [AbraFlexi](https://abraflexi.eu/)
-  * [Ease Core](https://github.com/VitexSoftware/php-ease-core) - Glue & Tool Set 
-  * [Jasper Compiler](https://github.com/VitexSoftware/jaspercompiler) - commandline jrxml compiler with AbraFlexi support
+* [PHP Language](https://secure.php.net/)
+* [PHP AbraFlexi](https://github.com/Spoje-NET/php-abraflexi) - Library for Interaction with [AbraFlexi](https://abraflexi.eu/)
+* [Ease Core](https://github.com/VitexSoftware/php-ease-core) - Glue & Tool Set 
+* [Jasper Compiler](https://github.com/VitexSoftware/jaspercompiler) - commandline jrxml compiler with AbraFlexi support
 
 Thanks to:
 ----------
 
- * [PureHTML](https://purehtml.cz/) & [Spoje.Net]( https://spoje.net/ )  for support
- * [Abra](https://abra.eu) for [AbraFlexi](https://abraflexi.eu/)
+* [PureHTML](https://purehtml.cz/) & [Spoje.Net]( https://spoje.net/ )  for support
+* [Abra](https://abra.eu) for [AbraFlexi](https://abraflexi.eu/)

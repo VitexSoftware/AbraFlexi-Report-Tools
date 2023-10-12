@@ -1,5 +1,5 @@
-README.md	        		usr/share/abraflexi-report-tools/
+README.md	       	    usr/share/abraflexi-report-tools/
 src/*.php                   usr/share/abraflexi-report-tools/
-src/Report/*.php                   usr/share/abraflexi-report-tools/Report
-bin/*		                usr/bin/
+src/Report/*.php            usr/share/abraflexi-report-tools/Report
+bin/*		            usr/bin/
 debian/conf/composer.json   usr/lib/abraflexi-report-tools/
