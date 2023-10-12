@@ -38,7 +38,7 @@
   },
   "autoload": {
     "psr-4": {
-      "AbraFlexi\\Report\\": "./Report"
+      "AbraFlexi\\Report\\": "/usr/share/abraflexi-report-tools/Report/"
     }
   },
   "version": "0.10.4"
