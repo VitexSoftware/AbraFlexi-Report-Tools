@@ -4,6 +4,7 @@ Set of commandline tools related to AbraFlexi Custom reports
 
 ![Project Logo](project-logo.png?raw=true)
 
+[![wakatime](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/9cec785f-7311-4d62-ab1d-7dfcdf74787f.svg)](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/9cec785f-7311-4d62-ab1d-7dfcdf74787f)
 
 Project Extractor
 -----------------

@@ -9,18 +9,17 @@
 
 namespace AbraFlexi\Report;
 
+use AbraFlexi\Priloha;
+use AbraFlexi\Report;
+use AbraFlexi\RO;
+
 /**
  * Custom Report Uploader class
  *
  * @author Vítězaslav Dvořák <info@vitexsoftware.cz>
  */
-class Uploader extends \AbraFlexi\Report
+class Uploader extends Report
 {
-    public function __construct($init = null, $options = array())
-    {
-        parent::__construct($init, $options);
-    }
-
     /**
      *
      * @param string $jrXMLfile
@@ -39,10 +38,10 @@ class Uploader extends \AbraFlexi\Report
      *
      * @param string $filename
      *
-     * @return \AbraFlexi\Priloha
+     * @return Priloha
      */
     public function attachFile($filename)
     {
-        return \AbraFlexi\Priloha::addAttachmentFromFile($this, pathinfo($filename, PATHINFO_EXTENSION) == 'jrxml' ? self::compileJasper($filename) : $filename);
+        return Priloha::addAttachmentFromFile($this, pathinfo($filename, PATHINFO_EXTENSION) == 'jrxml' ? self::compileJasper($filename) : $filename);
     }
 }
