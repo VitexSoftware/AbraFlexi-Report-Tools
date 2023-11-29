@@ -30,10 +30,9 @@ This tool do not use config file. Only environment variables like ABRAFLEXI_URL.
 Report Preview
 --------------
 
-Download invoice with given report form and open it in preview application
-
+Download invoice in given report form (and language) and open it in preview application
 ```shell
-previewreport code:Test3 code:VF1-0001/2023
+previewreport code:Test3 code:VF1-0001/2023 en
 ```
 
 Installation
