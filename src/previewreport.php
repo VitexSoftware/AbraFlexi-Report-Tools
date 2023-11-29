@@ -18,11 +18,11 @@ if ($argc < 3) {
     $reportID = $argv[1];
     $invoiceID = $argv[2];
 
-    $invoicer = new \AbraFlexi\FakturaVydana($invoiceID);
-    $reporter = new \AbraFlexi\Report($reportID);
-
-    $pdfFile = $invoicer->downloadInFormat('pdf', sys_get_temp_dir() . '/', $reportID);
+    $invoicer = new \AbraFlexi\FakturaVydana($invoiceID, ['throwException' => false]);
+    $pdfFile = $invoicer->downloadInFormat('pdf', sys_get_temp_dir() . '/', \AbraFlexi\RO::uncode($reportID));
     if ($pdfFile) {
         system('xdg-open ' . $pdfFile);
+    } else {
+        $response = $invoicer->parseResponse($invoicer->rawResponseToArray(strval($invoicer->lastCurlResponse), $invoicer->responseFormat), $invoicer->lastResponseCode);
     }
 }
