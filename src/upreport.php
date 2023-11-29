@@ -26,6 +26,8 @@ if ($argc < 3) {
     if ($uploader->lastResponseCode == 404) {
         $uploader->sync(['kod' => $kod, 'formInfoCode' => $formCode, 'nazev' => $reportName]);
     }
+    $uploader->unsetDataValue('kod'); //Dirty Hack
+    $uploader->updateApiURL();
 
     foreach ($attachments as $attachment) {
         if (file_exists($attachment)) {
@@ -37,8 +39,6 @@ if ($argc < 3) {
 
     if (file_exists($reportFile)) {
         $oldReportId = intval($uploader->getDataValue('hlavniReport'));
-        $uploader->unsetDataValue('kod'); //Dirty Hack
-        $uploader->updateApiURL();
         $attachment = $uploader->attachFile($reportFile);
 
         if ($uploader->sync(['hlavniReport' => $attachment->getRecordID(), 'id' => $uploader->getRecordID()])) {
