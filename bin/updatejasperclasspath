@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ -f /usr/share/flexibee/lib/VERSION.txt ]; then
+    FBVERSION=$(cat /usr/share/flexibee/lib/VERSION.txt)
+    FBPATH=/usr/share/flexibee/
+elif [ -f /usr/share/abraflexi/lib/VERSION.txt ]; then
+    FBVERSION=$(cat /usr/share/abraflexi/lib/VERSION.txt)
+    FBPATH=/usr/share/abraflexi/
+else
+    FBVERSION=$1
+fi
+echo "Updating jasper studio classpaths to use with AbraFlexi $FBVERSION"
+
+for f in `grep --exclude-dir=lost+found  --include=.classpath -rw ~ -e "classpathentry kind=\"lib\" path=\"${FBPATH}lib/winstrom-*" | awk -F: '{print $1}' | uniq`
+do
+    echo updating $f
+    sed -i -r 's/([0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}|[0-9]{4}\.[0-9]{1,2}\.[0-9]{1,2})/'${FBVERSION}'/g' $f
+done

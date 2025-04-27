@@ -12,7 +12,7 @@
     ],
     "bin": ["bin/fbget", "bin/fbput", "bin/fbcp","bin/upreport"],
     "require": {
-        "spojenet/flexibee": "*",
+        "spojenet/flexibee": "^3.4",
         "lightools/xml": "^3.0"
     },
     "autoload": {
@@ -27,5 +27,16 @@
         }
     },
     "require-dev": {
+        "phpunit/phpunit": "*",
+        "phpstan/phpstan": "*",
+        "friendsofphp/php-cs-fixer": "^3.61",
+        "ergebnis/composer-normalize": "^2.43",
+        "ergebnis/php-cs-fixer-config": "^6.34",
+        "phpstan/phpstan-phpunit": "2.0.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
     }
 }

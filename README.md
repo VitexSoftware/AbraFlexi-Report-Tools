@@ -1,13 +1,12 @@
-# AbraFlexi Report Tools
+# Report Tools for AbraFlexi
 
 Set of commandline tools related to AbraFlexi Custom reports
 
-![Project Logo](project-logo.png?raw=true)
+![Project Logo](project-logo.svg?raw=true)
 
 [![wakatime](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/9cec785f-7311-4d62-ab1d-7dfcdf74787f.svg)](https://wakatime.com/badge/user/5abba9ca-813e-43ac-9b5f-b1cfdf3dc1c7/project/9cec785f-7311-4d62-ab1d-7dfcdf74787f)
 
-Project Extractor
------------------
+## Project Extractor
 
 
 Create JasperStudio project from AbraFlexi report installation file
@@ -16,8 +15,7 @@ Create JasperStudio project from AbraFlexi report installation file
     repxmlunpacker <abraflexi-reports-import.xml> </saveto/jasper/project/destorworkspace>
 ```
 
-Report Uploader
----------------
+## Report Uploader
 
 Upload or Compile & Upload report files: https://github.com/Vitexus/winstrom-reports
 
@@ -27,16 +25,14 @@ upreport  <code:recordIdent> <"Report Name"> <formInfoCode> <reportfile.jrxml|.j
 
 This tool do not use config file. Only environment variables like ABRAFLEXI_URL.
 
-Report Preview
---------------
+## Report Preview
 
 Download invoice in given report form (and language) and open it in preview application
 ```shell
 previewreport code:Test3 code:VF1-0001/2023 en
 ```
 
-Installation
-------------
+## Installation
 
 To install tools into vendor/bin please use [composer](https://getcomposer.org/):
 
@@ -57,13 +53,12 @@ sudo apt install abraflexi-report-tools
 
 We use:
 
-* [PHP Language](https://secure.php.net/)
+* [PHP Language](https://www.php.net/)
 * [PHP AbraFlexi](https://github.com/Spoje-NET/php-abraflexi) - Library for Interaction with [AbraFlexi](https://abraflexi.eu/)
 * [Ease Core](https://github.com/VitexSoftware/php-ease-core) - Glue & Tool Set 
 * [Jasper Compiler](https://github.com/VitexSoftware/jaspercompiler) - commandline jrxml compiler with AbraFlexi support
 
-Thanks to:
-----------
+## Thanks to:
 
 * [PureHTML](https://purehtml.cz/) & [Spoje.Net]( https://spoje.net/ )  for support
 * [Abra](https://abra.eu) for [AbraFlexi](https://abraflexi.eu/)
