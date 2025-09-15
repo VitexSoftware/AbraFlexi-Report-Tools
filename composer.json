@@ -12,7 +12,7 @@
     ],
     "bin": ["bin/upreport"],
     "require": {
-        "spojenet/flexibee": "^3.6",
+        "spojenet/flexibee": "^2025.7",
         "lightools/xml": "^3.0"
     },
     "autoload": {
