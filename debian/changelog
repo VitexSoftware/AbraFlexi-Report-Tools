@@ -1,8 +1,14 @@
-abraflexi-report-tools (0.5.0) UNRELEASED; urgency=medium
+abraflexi-report-tools (0.6.0) UNRELEASED; urgency=medium
+
+  * launcher scripts now all begin with abraflexi prefix
+
+ -- vitex <info@vitexsoftware.cz>  Sat, 20 Sep 2025 13:10:50 +0200
+
+abraflexi-report-tools (0.5.0) unstable; urgency=medium
 
   * updatejasperclasspath added
 
- -- vitex <info@vitexsoftware.cz>  Sun, 27 Apr 2025 23:38:46 +0200
+ -- vitex <info@vitexsoftware.cz>  Sat, 20 Sep 2025 13:10:24 +0200
 
 abraflexi-report-tools (0.4.0) unstable; urgency=medium
 
