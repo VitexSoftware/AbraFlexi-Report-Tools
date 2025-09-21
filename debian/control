@@ -1,5 +1,5 @@
 Source: abraflexi-report-tools
-Build-Depends: debhelper (>= 7.0.50~),po-debconf
+Build-Depends: debhelper (>= 7.0.50~),po-debconf, moreutils, jq
 Standards-Version: 3.9.8
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Uploaders: Vitex <vitex@hippy.cz>
