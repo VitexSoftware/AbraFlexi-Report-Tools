@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vitexsoftware.abraflexi_report_tools</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>abraflexi-report-tools</name>
+  <summary>commandline AbraFlexi Report tools</summary>
+  <description>
+    <p>
+      Set of tools related to Abra Flexi custom Reports
+    </p>
+  </description>
+  <categories>
+    <category>Utility</category>
+  </categories>
+  <url type="homepage">https://github.com/VitexSoftware/AbraFlexi-Report-Tools</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/AbraFlexi-Report-Tools/issues</url>
+  <developer id="cz.vitexsoftware">
+    <name>VitexSoftware</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+</component>
