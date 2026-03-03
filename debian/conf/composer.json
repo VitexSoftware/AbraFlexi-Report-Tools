@@ -13,9 +13,6 @@
     "bin/upreport",
     "bin/repxmlunpacker"
   ],
-  "config": {
-    "vendor-dir": "/var/lib/abraflexi-report-tools"
-  },
   "repositories": [
     {
       "type": "path",
