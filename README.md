@@ -1,6 +1,6 @@
 # Report Tools for AbraFlexi
 
-Set of commandline tools related to AbraFlexi Custom reports
+Set of command-line tools related to AbraFlexi custom reports.
 
 ![Project Logo](project-logo.svg?raw=true)
 
@@ -9,44 +9,64 @@ Set of commandline tools related to AbraFlexi Custom reports
 ## Project Extractor
 
 
-Create JasperStudio project from AbraFlexi report installation file
+Create a JasperStudio project from an AbraFlexi report installation file.
 
 ```shell
-    repxmlunpacker <abraflexi-reports-import.xml> </saveto/jasper/project/destorworkspace>
+abraflexi-repxmlunpacker <abraflexi-reports-import.xml> </saveto/jasper/project/destination-workspace>
+```
+
+## Jasper Classpath Updater
+
+Update Jasper Studio `.classpath` files to match the installed AbraFlexi
+version.
+
+```shell
+abraflexi-updatejasperclasspath
 ```
 
 ## Report Uploader
 
-Upload or Compile & Upload report files: https://github.com/Vitexus/winstrom-reports
+Upload or compile and upload report files: https://github.com/Vitexus/winstrom-reports
 
 ```shell
-upreport  <code:recordIdent> <"Report Name"> <formInfoCode> <reportfile.jrxml|.jasper>
+abraflexi-upreport <code:recordIdent> "<Report Name>" <formInfoCode> <reportfile.jrxml|.jasper> [attachments...]
 ```
 
-This tool do not use config file. Only environment variables like ABRAFLEXI_URL.
+This tool does not use a dedicated config file. It reads AbraFlexi connection
+settings from environment variables such as `ABRAFLEXI_URL`.
 
 ## Report Preview
 
-Download invoice in given report form (and language) and open it in preview application
+Download an invoice in a given report form (and language) and open it in the
+default preview application.
 ```shell
-previewreport code:Test3 code:VF1-0001/2023 en
+abraflexi-previewreport code:Test3 code:VF1-0001/2023 en
 ```
 
 ## Installation
 
-To install tools into vendor/bin please use [composer](https://getcomposer.org/):
+To install the tools into `vendor/bin`, use [composer](https://getcomposer.org/):
 
-    composer require vitexsoftware/abraflexi-report-tools
+```shell
+composer require vitexsoftware/abraflexi-report-tools
+```
 
-For Debian or Ubuntu please use [repo](http://vitexsoftware.cz/repos.php):
+For Debian or Ubuntu, use [repo](http://vitexsoftware.cz/repos.php):
 
-```sheel
+```shell
 sudo apt install lsb-release wget
 echo "deb http://repo.vitexsoftware.com $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/vitexsoftware.list
 sudo wget -O /etc/apt/trusted.gpg.d/vitexsoftware.gpg http://repo.vitexsoftware.com/keyring.gpg
 sudo apt update
 sudo apt install abraflexi-report-tools
 ```
+
+After installing the Debian package, manual pages are available for all shipped
+commands:
+`man abraflexi-upreport`,
+`man abraflexi-previewreport`,
+`man abraflexi-repxmlunpacker`,
+and `man abraflexi-updatejasperclasspath`.
 
 
 ![Debian Installation](debian-screenshot.png?raw=true "Debian example")

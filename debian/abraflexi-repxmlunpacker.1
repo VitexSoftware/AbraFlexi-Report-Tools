@@ -1,0 +1,40 @@
+.TH ABRAFLEXI-REPXMLUNPACKER 1 "2025-09-20" "abraflexi-report-tools" "User Commands"
+.SH NAME
+abraflexi-repxmlunpacker \- create a JasperStudio project from an AbraFlexi report export
+.SH SYNOPSIS
+.B abraflexi-repxmlunpacker
+.I abraflexi-reports-import.xml
+.I destination-directory
+.SH DESCRIPTION
+.B abraflexi-repxmlunpacker
+extracts an AbraFlexi report installation XML file into a JasperStudio project
+directory structure.
+It creates Eclipse project metadata, populates a Java classpath referencing the
+installed AbraFlexi libraries, and writes each exported report and attachment to
+its own directory.
+.PP
+Attachments embedded in the source XML are decoded from Base64 and written next
+to the extracted report metadata.
+.SH ARGUMENTS
+.TP
+.I abraflexi-reports-import.xml
+Source XML file exported from AbraFlexi containing one or more reports.
+.TP
+.I destination-directory
+Directory where the JasperStudio project should be created.
+The tool appends the XML filename stem as the project directory name.
+.SH FILES
+.TP
+.I /usr/share/abraflexi/lib/
+Used to determine installed AbraFlexi library version and populate the generated
+.I .classpath
+file.
+.SH EXAMPLES
+.TP
+Extract a report bundle into a Jasper workspace:
+.B abraflexi-repxmlunpacker abraflexi-reports-import.xml /path/to/jasper/workspace/
+.SH SEE ALSO
+.BR abraflexi-upreport (1),
+.BR abraflexi-updatejasperclasspath (1)
+.SH AUTHOR
+Vítězslav Dvořák

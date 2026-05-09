@@ -1,0 +1,69 @@
+.TH ABRAFLEXI-UPREPORT 1 "2025-09-20" "abraflexi-report-tools" "User Commands"
+.SH NAME
+abraflexi-upreport \- upload AbraFlexi custom report files
+.SH SYNOPSIS
+.B abraflexi-upreport
+.I recordIdent
+.I "report name"
+.I formInfoCode
+.I reportfile
+[\fIattachment\fR ...]
+.SH DESCRIPTION
+.B abraflexi-upreport
+uploads a custom report definition to AbraFlexi.
+If the main report file is a
+.I .jrxml
+file, it is compiled using
+.BR jaspercompiler (1)
+before upload.
+Additional files such as translations, images, or other resources can be attached
+to the report in the same invocation.
+.PP
+If the target report record does not yet exist, the tool creates it using the
+supplied record identifier, report name, and form information code.
+.SH ARGUMENTS
+.TP
+.I recordIdent
+AbraFlexi record identifier, for example
+.BR code:PokladDen .
+.TP
+.I "report name"
+Human-readable report name shown in AbraFlexi.
+.TP
+.I formInfoCode
+AbraFlexi form information code for the target agenda.
+.TP
+.I reportfile
+Main report file to upload. This is usually a
+.I .jrxml
+or
+.I .jasper
+file.
+.TP
+.I attachment
+Optional additional files bundled with the report, such as
+.I localization.json
+or image assets.
+.SH ENVIRONMENT
+The tool reads AbraFlexi connection settings via
+\fBEase\\Shared::init()\fR
+from environment variables or a local
+.I .env
+file:
+.BR ABRAFLEXI_URL ,
+.BR ABRAFLEXI_LOGIN ,
+.BR ABRAFLEXI_PASSWORD ,
+and
+.BR ABRAFLEXI_COMPANY .
+.SH EXAMPLES
+.TP
+Upload a report source file and attachments:
+.B abraflexi-upreport code:PokladDen "My Report" pokDenik report.jrxml localization.json logo.png
+.TP
+Upload a precompiled Jasper file:
+.B abraflexi-upreport code:TEST "My Report" formInfoCode report.jasper
+.SH SEE ALSO
+.BR abraflexi-previewreport (1),
+.BR abraflexi-repxmlunpacker (1)
+.SH AUTHOR
+Vítězslav Dvořák

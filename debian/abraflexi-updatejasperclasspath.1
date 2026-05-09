@@ -1,0 +1,36 @@
+.TH ABRAFLEXI-UPDATEJASPERCLASSPATH 1 "2025-09-20" "abraflexi-report-tools" "User Commands"
+.SH NAME
+abraflexi-updatejasperclasspath \- update Jasper Studio classpaths for the installed AbraFlexi version
+.SH SYNOPSIS
+.B abraflexi-updatejasperclasspath
+[\fIversion\fR]
+.SH DESCRIPTION
+.B abraflexi-updatejasperclasspath
+searches the current user's home directory for Eclipse
+.I .classpath
+files that reference AbraFlexi or FlexiBee libraries and rewrites embedded
+version numbers to match the locally installed AbraFlexi version.
+.PP
+The tool first checks
+.I /usr/share/flexibee/lib/VERSION.txt
+and then
+.I /usr/share/abraflexi/lib/VERSION.txt
+to detect the installed version automatically.
+If neither file is present, a version can be supplied explicitly as the first
+argument.
+.SH ARGUMENTS
+.TP
+.I version
+Optional explicit AbraFlexi version to use when no installed version can be
+detected.
+.SH EXAMPLES
+.TP
+Use the installed AbraFlexi version:
+.B abraflexi-updatejasperclasspath
+.TP
+Force a specific version:
+.B abraflexi-updatejasperclasspath 2025.9.20
+.SH SEE ALSO
+.BR abraflexi-repxmlunpacker (1)
+.SH AUTHOR
+Vítězslav Dvořák

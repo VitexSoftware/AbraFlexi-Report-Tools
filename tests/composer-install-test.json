@@ -2,7 +2,7 @@
     "name": "vendor/test-fbtt",
     "type": "project",
     "require": {
-        "vitexsoftware/abraflexi-tools": "dev-master"
+        "vitexsoftware/abraflexi-report-tools": "dev-main"
     },
     "license": "MIT",
     "minimum-stability": "dev"
