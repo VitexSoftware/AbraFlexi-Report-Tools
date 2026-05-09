@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop-application">
+<component type="console-application">
   <id>io.github.vitexsoftware.abraflexi_report_tools</id>
-  <icon type="stock">abraflexi-report-tools</icon>
-  <metadata_license>MIT</metadata_license>
+  <metadata_license>FSFAP</metadata_license>
   <project_license>MIT</project_license>
-  <name>abraflexi-report-tools</name>
-  <summary>commandline AbraFlexi Report tools</summary>
+  <name>AbraFlexi Report Tools</name>
+  <summary>Command-line tools for AbraFlexi custom reports</summary>
+  <icon type="stock">abraflexi-report-tools</icon>
   <description>
-    <p>
-      Set of tools related to Abra Flexi custom Reports
-    </p>
+    <p>AbraFlexi Report Tools is a collection of command-line utilities for managing custom Jasper reports in the AbraFlexi accounting system. It covers the full report lifecycle: uploading compiled or source reports, unpacking report bundles into JasperStudio projects, previewing invoices, and keeping Jasper Studio classpaths in sync with the installed AbraFlexi version.</p>
+    <p>Available tools:</p>
+    <ul>
+      <li><em>abraflexi-upreport</em> — upload or compile and upload Jasper report files to AbraFlexi</li>
+      <li><em>abraflexi-repxmlunpacker</em> — create JasperStudio projects from AbraFlexi report installation files</li>
+      <li><em>abraflexi-previewreport</em> — download and preview invoices in a specific report format</li>
+      <li><em>abraflexi-updatejasperclasspath</em> — update Jasper Studio classpaths to match the installed AbraFlexi version</li>
+    </ul>
   </description>
+  <releases>
+    <release version="0.6.0" date="2025-09-20">
+      <description>
+        <p>Launcher scripts now all begin with the abraflexi prefix.</p>
+      </description>
+    </release>
+  </releases>
+  <provides>
+    <binary>abraflexi-upreport</binary>
+    <binary>abraflexi-repxmlunpacker</binary>
+    <binary>abraflexi-previewreport</binary>
+    <binary>abraflexi-updatejasperclasspath</binary>
+  </provides>
   <categories>
     <category>Utility</category>
   </categories>
