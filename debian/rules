@@ -8,6 +8,7 @@ PKG_SOURCE  := $(shell jq -r '.name' composer.json)
 
 override_dh_install:
 	dh_install
+	mkdir -p debian/abraflexi-report-tools/usr/share/abraflexi-report-tools
 	install -m 644 debian/autoload.php \
 		debian/abraflexi-report-tools/usr/share/abraflexi-report-tools/autoload.php
 	sed -i "1a defined('APP_NAME') || define('APP_NAME', '$(PKG_SOURCE)');" \
