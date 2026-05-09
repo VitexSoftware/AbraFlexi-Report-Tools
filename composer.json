@@ -12,8 +12,7 @@
     ],
     "bin": ["bin/upreport"],
     "require": {
-        "spojenet/flexibee": "^3.7",
-        "lightools/xml": "^3.0"
+        "spojenet/flexibee": "^3.7"
     },
     "autoload": {
         "psr-4": {
